@@ -46,6 +46,12 @@ username_box.send_keys(os.environ['AMIZONE_USERNAME'])
 password_box.send_keys(os.environ['AMIZONE_PASSWORD'])
 submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button").click()
 
+# check if button exists 
+try:
+    my_courses_button = WebDriverWait(driver, timeout=10).until(EC.element_to_be_clickable((By.ID, 'menu-toggler'))).click()
+except:
+    print("No Menu Toggler Found")
+
 # Finding ATPC Placement button
 my_courses_button = WebDriverWait(driver, timeout=10).until(EC.element_to_be_clickable((By.PARTIAL_LINK_TEXT, 'ATPC Placement'))).click()
 
