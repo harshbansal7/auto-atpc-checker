@@ -26,7 +26,7 @@ with open ('config.json', 'r') as file:
     config = json.load(file)
 
 options = Options()
-# options.add_argument("--headless=new")
+options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 
 driver.get(config['amizone_url'])
