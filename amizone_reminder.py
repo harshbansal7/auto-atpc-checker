@@ -31,7 +31,7 @@ options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-options.add_argument("--window-size=291,554")
+options.add_argument("--window-size=1366,768")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 driver = webdriver.Chrome(options=options)
