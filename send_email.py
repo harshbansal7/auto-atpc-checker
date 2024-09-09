@@ -116,7 +116,7 @@ def frame_email_and_send(data):
 	return send_email(data, html)
 
 def send_email(data, body_html):
-    response = requests.post("https://api.mailgun.net/v3/mg.harshmakes.tech/messages", auth=("api", os.environ['MAILGUN_API_KEY']), data={"from": "ATPC Updates<noreply@mg.harshmakes.tech>", "to": ["harsh.bansal3@s.amity.edu"],"subject": f"{data['company_name']} | Placement Update", "html": body_html})
+    response = requests.post("https://api.mailgun.net/v3/mg.harshmakes.tech/messages", auth=("api", os.environ['MAILGUN_API_KEY']), data={"from": "ATPC Updates<noreply@mg.harshmakes.tech>", "to": ["harsh.bansal3@s.amity.edu", "shivangi.sharma8@s.amity.edu"],"subject": f"{data['company_name']} | Placement Update", "html": body_html})
     
     if response.status_code == 200:
         print(f"Email sent for {data['company_name']} with status code {response.status_code}")

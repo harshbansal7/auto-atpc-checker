@@ -16,6 +16,8 @@ load_dotenv()
 script_path = os.path.dirname(os.path.realpath(__file__))
 os.chdir(script_path)
 
+print(script_path)
+
 handled_companies = set()
 counter = 0
 config = {}
