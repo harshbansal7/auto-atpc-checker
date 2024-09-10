@@ -3,12 +3,12 @@ The students at my university were finding it hard to open our college portal tw
 
 ### Tech Used and the Process
 * **Selenium**: The Selenium Web Driver (chrome) is used to perform the following steps:
-- Login to Amizone using credentials
-- Wait for the Page to Load
-- Find the ATPC Placement Button and Click It
-- Find the Placements Button and Click It
-- Read the Table on the Page
-- Find the opportunity that has applications open.
+  - Login to Amizone using credentials
+  - Wait for the Page to Load
+  - Find the ATPC Placement Button and Click It
+  - Find the Placements Button and Click It
+  - Read the Table on the Page
+  - Find the opportunity that has applications open.
 
 * **Mailgun**: Through the Github Student Dev Pack, I got 20K mails per month limit, and so I decided to use it for the mailing mechanism. Once we identify the opportunity to share, we use the Mailgun API to queue the mails. Sadly there's no Python SDK yet for Mailgun.
 
